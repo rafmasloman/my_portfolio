@@ -3,7 +3,7 @@ import { MouseEventHandler, PropsWithChildren } from "react";
 export interface IBaseButtonPropsType extends PropsWithChildren {
   varianst: "primary" | "secondary";
   className?: string;
-  click?: () => {};
+  click?: () => void;
 }
 
 export interface ITabButtonPropsType extends PropsWithChildren {

@@ -19,21 +19,17 @@ export const ProjectSection = () => {
   });
 
   return (
-    <Section
-      className={`
-    
-  `}
-    >
+    <Section>
       <div className="">
         <Typography className="font-semibold text-base md:text-2xl text-center">
-          What I've Been Working On
+          What I&apos;ve Been Working On
         </Typography>
 
         <div className="my-2"></div>
 
         <Typography className="text-gray-400 text-sm md:text-base md:px-56 text-center">
-          Here's a collection of my work — spanning internal systems built for
-          enterprise use, freelance projects for various clients, and
+          Here&apos;s a collection of my work — spanning internal systems built
+          for enterprise use, freelance projects for various clients, and
           public-facing platforms designed for everyday users. Each project
           reflects my focus on scalability, clean architecture, and meaningful
           user experiences.

@@ -26,7 +26,7 @@ import ExperienceSection from "@/components/features/experience/ExperienceSectio
 
 export default function Home() {
   const [tabActive, setTabActive] = useState<number>(1);
-  const [visibleSection, setVisibleSection] = useState(1);
+  const [, setVisibleSection] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleChangeSection = (tab: number) => {
@@ -50,7 +50,7 @@ export default function Home() {
           <Section direction="row" justify="between">
             <Section direction="column">
               <Typography className="text-light text-md md:text-xl lg:text-2xl animate-bounce">
-                Hi, I'm Rafly Masloman
+                Hi, I&apos;m Rafly Masloman
               </Typography>
 
               <div className="flex flex-col gap-y-4 mt-8 md:mt-12 mb-16 ">
@@ -62,19 +62,19 @@ export default function Home() {
 
                 <Typography className="text-light font-light text-sm md:text-lg text-justify w-full md:w-5/6 lg:w-full">
                   I turn ideas into interactive, scalable, and meaningful web
-                  experiences. Whether it's designing smooth UI flows or
+                  experiences. Whether it&apos;s designing smooth UI flows or
                   optimizing backend performance, I find joy in every pixel and
                   every line of code.
                 </Typography>
 
                 <Typography className="text-light font-light text-sm md:text-lg text-justify w-full md:w-5/6 lg:w-full">
-                  Beyond the keyboard, I'm a curious learner, tech enthusiast,
-                  and a believer in simplicity — because great things don't need
-                  to be complicated.
+                  Beyond the keyboard, I&apos;m a curious learner, tech
+                  enthusiast, and a believer in simplicity — because great
+                  things don&apos;t need to be complicated.
                 </Typography>
 
                 <Typography className="text-light font-light text-sm md:text-lg text-justify w-full md:w-5/6 lg:w-full ">
-                  Let's connect and create something awesome together.
+                  Let&apos;s connect and create something awesome together.
                 </Typography>
               </div>
 

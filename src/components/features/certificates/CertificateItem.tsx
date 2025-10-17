@@ -5,9 +5,7 @@ import { MdOutlineZoomOutMap } from "react-icons/md";
 
 const CertificateItem = (props: ICertificateItemPropsType) => {
   const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
-  const [isMouseLeave, setIsMouseLeave] = useState<boolean>(true);
-
-  const [hoverPreview, setHoverPreview] = useState();
+  const [, setIsMouseLeave] = useState<boolean>(true);
 
   const handleMouseEnter = () => {
     setIsMouseEnter(true);
