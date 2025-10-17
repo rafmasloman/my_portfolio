@@ -182,7 +182,7 @@ export default function Home() {
         `}
       >
         <Container>
-          <SkillSection visible={visibleSection === 1} />
+          <SkillSection />
         </Container>
       </div>
 
@@ -197,7 +197,7 @@ export default function Home() {
         `}
       >
         <Container>
-          <ProjectSection visible={visibleSection === 2} />
+          <ProjectSection />
         </Container>
       </div>
 

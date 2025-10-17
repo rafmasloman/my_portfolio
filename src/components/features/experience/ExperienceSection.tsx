@@ -1,7 +1,5 @@
 import Typography from "@/components/common/Text/Text";
 import Section from "@/components/layouts/Section/Section";
-import { ExperienceItemData } from "../general/data";
-import ExperienceItem from "./ExperienceItem";
 import ProfessionalSection from "./ProfessionalSection";
 import OrganizationalSection from "./OrganizationSection";
 

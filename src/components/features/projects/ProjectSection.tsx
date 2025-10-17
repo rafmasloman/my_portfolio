@@ -2,9 +2,8 @@ import Typography from "@/components/common/Text/Text";
 import Section from "@/components/layouts/Section/Section";
 import { ProjectItemData } from "../general/data";
 import ProjectItem from "./ProjectItem";
-import { IGeneralSectionContentPropsType } from "../general/interface";
 
-export const ProjectSection = (props: IGeneralSectionContentPropsType) => {
+export const ProjectSection = () => {
   const projectItem = ProjectItemData.map((item, index) => {
     return (
       <ProjectItem

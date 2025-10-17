@@ -22,9 +22,8 @@ import {
 } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { IGeneralSectionContentPropsType } from "../general/interface";
 
-const SkillSection = (props: IGeneralSectionContentPropsType) => {
+const SkillSection = () => {
   return (
     <Section
       className={`
