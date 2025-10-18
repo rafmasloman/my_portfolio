@@ -1,3 +1,5 @@
+"use client";
+
 import { IBaseButtonPropsType } from "./interface";
 
 const Button = ({

@@ -23,6 +23,7 @@ import { ProjectSection } from "@/components/features/projects/ProjectSection";
 import TabButton from "@/components/common/Button/TabButton";
 import CertificateSection from "@/components/features/certificates/CertificateSection";
 import ExperienceSection from "@/components/features/experience/ExperienceSection";
+import ILContactMe from "@/assets/images/contact_me.png";
 
 export default function Home() {
   const [tabActive, setTabActive] = useState<number>(1);
@@ -228,6 +229,36 @@ export default function Home() {
       >
         <Container>
           <ExperienceSection />
+        </Container>
+      </div>
+
+      <div className="flex flex-col gap-8 my-5 justify-center">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 ">
+            <Image src={ILContactMe} alt="" className="w-[500px]" />
+            <div className="flex flex-col gap-8 px-12 justify-center  items-center">
+              <Typography className="font-semibold text-lg md:text-2xl text-center">
+                Contact Me
+              </Typography>
+
+              <input
+                placeholder="Insert your name"
+                className="w-full p-3 border border-gray-600 bg-dark-2 rounded-xl"
+              />
+              <input
+                placeholder="Insert your email"
+                className="w-full  p-3 border border-gray-600 bg-dark-2 rounded-xl"
+              />
+              <textarea
+                placeholder="Write your message"
+                className="w-full  p-3 border border-gray-600 bg-dark-2 rounded-xl"
+              ></textarea>
+
+              <Button varianst="secondary" className="cursor-pointer w-full">
+                Send Message
+              </Button>
+            </div>
+          </div>
         </Container>
       </div>
     </div>
