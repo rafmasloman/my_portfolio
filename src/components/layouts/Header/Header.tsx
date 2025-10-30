@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/common/Navbar/Navbar";
 import ICBrand from "@/components/common/Icons/ICBrand";
 import Button from "@/components/common/Button/Button";

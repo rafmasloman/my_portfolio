@@ -2,12 +2,16 @@ import { IProjectItemPropsType } from "../projects/interface";
 import ImageBangiProject from "../../../assets/images/projects-bangi-finance.png";
 import ImageKartjisProject from "../../../assets/images/project-kartjis.png";
 import ImageInternalProject from "../../../assets/images/project-internal.png";
+import ImageCarwashBookingProject from "../../../assets/images/project_carwash_booking.png";
 import Certificate01 from "@/assets/images/certificate/bangkit_mentor_certificate.jpg";
 import Certificate02 from "@/assets/images/certificate/dicoding_certificate.png";
 import Certificate03 from "@/assets/images/certificate/dicoding_certificate_2.png";
 import Certificate04 from "@/assets/images/certificate/dicoding_certificate_3.png";
 import Certificate05 from "@/assets/images/certificate/dicoding_certificate_4.png";
 import { IExperienceItemPropsType } from "../experience/interface";
+import PegadaianLogo from "@/assets/images/company/pegadaian-logo.png";
+import KartjisLogo from "@/assets/images/company/kartjis-logo.png";
+import BangkitLogo from "@/assets/images/company/Bangkit-logo.png";
 
 export const ProjectItemData: IProjectItemPropsType[] = [
   {
@@ -25,6 +29,16 @@ export const ProjectItemData: IProjectItemPropsType[] = [
     role: "Frontend Engineer",
     image: ImageKartjisProject,
     company: "Kartjis.id",
+
+    description:
+      "A reporting module developed for an online ticketing platform similar to Loket.com. It provides real-time insights into ticket sales, event performance, and transaction summaries. I was responsible for building and maintaining the ticketing reporting system to ensure accurate and efficient data visualization for event organizers.",
+  },
+  {
+    title: "Carwash Booking System",
+    link: "",
+    role: "Frontend Engineer",
+    image: ImageCarwashBookingProject,
+    company: "Personal Project",
 
     description:
       "A reporting module developed for an online ticketing platform similar to Loket.com. It provides real-time insights into ticket sales, event performance, and transaction summaries. I was responsible for building and maintaining the ticketing reporting system to ensure accurate and efficient data visualization for event organizers.",
@@ -94,6 +108,7 @@ export const ExperienceItemData: IExperienceItemPropsType[] = [
     country: "Indonesia",
     position: "Fullstack Developer",
     position_status: "Contract",
+    company_logo: PegadaianLogo,
   },
   {
     title: "Kartjis.id",
@@ -108,6 +123,7 @@ export const ExperienceItemData: IExperienceItemPropsType[] = [
     country: "Indonesia",
     position: "Frontend Developer",
     position_status: "Contract",
+    company_logo: KartjisLogo,
   },
   {
     title: "Dicoding - Bangkit Academy by Google, GoTo, Traveloka",
@@ -122,6 +138,7 @@ export const ExperienceItemData: IExperienceItemPropsType[] = [
     country: "Indonesia",
     position: "Cloud Computing Mentor",
     position_status: "Contract",
+    company_logo: BangkitLogo,
   },
   {
     title: "Software Engineering Laboratory Hasanuddin University",
@@ -131,7 +148,7 @@ export const ExperienceItemData: IExperienceItemPropsType[] = [
       "Supported learning outcomes by clarifying concepts and reviewing implementations.",
     ],
     start_time: "Februari 2023",
-    end_time: "July 2023",
+    end_time: "May 2023",
     city: "Makassar",
     country: "Indonesia",
     position: "Object Oriented Programming Practicum Assistant ",

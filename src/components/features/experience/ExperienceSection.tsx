@@ -1,3 +1,5 @@
+"use client";
+
 import Typography from "@/components/common/Text/Text";
 import Section from "@/components/layouts/Section/Section";
 import ProfessionalSection from "./ProfessionalSection";

@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface IExperienceItemPropsType {
   title: string;
   description?: string;
@@ -8,6 +10,7 @@ export interface IExperienceItemPropsType {
   position_status: string;
   city: string;
   country: string;
+  company_logo?: StaticImageData;
 }
 
 export interface IOrganizationalItemPropsType {
