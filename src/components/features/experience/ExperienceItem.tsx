@@ -4,8 +4,8 @@ import { IExperienceItemPropsType } from "./interface";
 import Image from "next/image";
 import BrandIc from "@/assets/images/brand-ic.png";
 import { IoIosArrowForward } from "react-icons/io";
-import { useEffect, useState } from "react";
 import { BsDot } from "react-icons/bs";
+import { useState } from "react";
 
 const ExperienceItem = (props: IExperienceItemPropsType) => {
   const [showDetail, setShowDetail] = useState(false);

@@ -9,7 +9,7 @@ pipeline {
 
   stages {
     // stage('Checkout') {
-    //   steps {
+    //   steps {  
     //     git branch: 'main', url: 'https://github.com/rafmasloman/my_portfolio.git'
     //   }
     // }
