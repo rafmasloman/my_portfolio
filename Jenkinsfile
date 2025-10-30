@@ -8,11 +8,11 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/rafmasloman/my_portfolio.git'
-      }
-    }
+    // stage('Checkout') {
+    //   steps {
+    //     git branch: 'main', url: 'https://github.com/rafmasloman/my_portfolio.git'
+    //   }
+    // }
 
     stage('Build Docker Image') {
       steps {
