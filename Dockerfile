@@ -1,48 +1,41 @@
-# syntax=docker/dockerfile:1.4
-########################################
-# Stage 1: deps - install dependencies #
-########################################
-FROM node:18-alpine AS deps
+# Stage 1: Builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy package.json & package-lock.json
-COPY package*.json ./
+# Copy dependency files
+COPY package.json package-lock.json* ./
 
-# Install all dependencies (devDependencies juga) dengan cache
-RUN --mount=type=cache,target=/root/.npm \
-    npm ci
+# Install dependencies (hanya untuk build)
+RUN npm ci
 
-########################################
-# Stage 2: builder - build Next.js     #
-########################################
-FROM node:18-alpine AS builder
-WORKDIR /app
-
-# Copy source code
+# Copy seluruh project
 COPY . .
 
-# Copy node_modules dari stage deps
-COPY --from=deps /app/node_modules ./node_modules
+# Build Next.js app (standalone)
+RUN npm run build
 
-# Build Next.js (Tailwind & fonts butuh devDependencies)
-RUN --mount=type=cache,target=/root/.npm \
-    npm run build
+# Stage 2: Pruner (optional, hanya ambil hasil build)
+FROM node:20-alpine AS pruner
+WORKDIR /app
 
-########################################
-# Stage 3: runner - production image  #
-########################################
-FROM node:18-alpine AS runner
+# Copy only build output from builder
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
+
+# Stage 3: Runner
+FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
+ENV PORT=3000
 
-# Copy production build artifacts
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package*.json ./
-
-# Copy node_modules runtime (hanya yang diperlukan)
-COPY --from=builder /app/node_modules ./node_modules
+# Copy only standalone build
+COPY --from=pruner /app/.next/standalone ./
+COPY --from=pruner /app/public ./public
+COPY --from=pruner /app/.next/static ./.next/static
 
 EXPOSE 3000
-CMD ["npm", "start"]
+
+CMD ["node", "server.js"]
